@@ -1,0 +1,114 @@
+# TODO
+
+- [ ] Shape
+  - [ ] Sphere
+  - [ ] Cylinder
+  - [ ] Disk
+  - [ ] Cone
+  - [ ] Paraboloid
+  - [ ] Hyperboloid
+  - [ ] Mesh
+  - [ ] Curve
+- [ ] Accelerator
+  - [ ] BVH
+  - [ ] KDTree
+- [X] Spectrum
+  - [ ] CoefficientSpectrum
+    - [ ] SampledSpectrum
+    - [X] RGBSpectrum
+- [ ] Camera
+  - [ ] ProjectiveCamera
+    - [ ] OrthographicCamera
+    - [ ] PerspectiveCamera
+  - [ ] EnvironmentCamera
+  - [ ] RealisticCamera
+- [ ] Sampler
+  - [ ] RandomSampler
+  - [ ] PixelSampler
+    - [ ] StratifiedSampler
+    - [ ] ZeroTwoSequenceSampler
+    - [ ] MaxMinDistSampler
+  - [ ] GlobalSampler
+    - [ ] HaltonSampler
+    - [ ] SobolSampler
+- [ ] Filter
+  - [ ] BoxFilter
+  - [ ] TriangleFilter
+  - [ ] GaussianFilter
+  - [ ] MitchellFilter
+  - [ ] LanczosSincFilter
+- [X] Fresnel
+  - [X] FresnelConductor
+  - [X] FresnelDielectrics
+  - [ ] FresnelNoOp
+- [ ] MicrofacetDistribution
+  - [ ] BeckmannSpizzichinoDistribution
+  - [ ] TrowbridgeReitzDistribution
+- [X] BxDF
+  - [X] SpecularReflection
+  - [ ] SpecularTransmission
+  - [ ] FresnelSpecular
+  - [ ] LambertianReflection
+  - [ ] LambertianTransmission
+  - [ ] OrenNayar
+  - [ ] MicrofacetReflection
+  - [ ] MicrofacetTransmission
+  - [ ] FresnelBlend
+  - [ ] FourierBSDF
+- [ ] Material
+  - [ ] MatteMaterial
+  - [ ] PlasticMaterial
+  - [ ] MixMaterial
+  - [ ] FourierMaterial
+  - [ ] GlassMaterial
+  - [ ] MetalMaterial
+  - [ ] MirrorMaterial
+  - [ ] SubstrateMaterial
+  - [ ] SubsurfaceMaterial
+  - [ ] TranslucentMaterial
+  - [ ] UberMaterial
+- [ ] TextureMapping2D
+  - [ ] UVMapping2D
+  - [ ] SphericalMapping2D
+  - [ ] CylindricalMapping2D
+  - [ ] PlanarMapping2D
+- [ ] TextureMapping3D
+  - [ ] TransformMapping3D
+- [ ] Texture
+  - [ ] ConstantTexture
+  - [ ] ScaleTexture
+  - [ ] MixTexture
+  - [ ] BilerpTexture
+  - [ ] ImageTexture
+  - [ ] UVTexture
+  - [ ] Checkerboard2DTexture
+  - [ ] Checkerboard3DTexture
+  - [ ] DotsTexture
+  - [ ] FBmTexture
+  - [ ] WrinkledTexture
+  - [ ] WindyTexture
+  - [ ] MarbleTexture
+- [ ] Medium
+  - [ ] HomogeneousMedium
+  - [ ] GridDensityMedium
+- [ ] BSSRDF
+  - [ ] SeparableBSSRDF
+  - [ ] TabulatedBSSRDF
+- [ ] Light
+  - [ ] PointLight
+  - [ ] SpotLight
+  - [ ] ProjectionLight
+  - [ ] GonioPhotometricLight
+  - [ ] DistantLight
+  - [ ] AreaLight
+    - [ ] DiffuseAreaLight
+  - [ ] InfiniteAreaLight
+- [ ] Integrator
+  - [ ] WhittedIntegrator
+  - [ ] DirectLightingIntegrator
+  - [ ] PathIntegrator
+  - [ ] VolPathIntegrator
+  - [ ] BDPTIntegrator
+  - [ ] AOIntegrator
+  - [ ] SPPMIntegrator
+  - [ ] MLTIntegrator

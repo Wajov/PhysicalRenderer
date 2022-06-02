@@ -1,0 +1,17 @@
+# ninja log v5
+1	1132	1653911532393829222	CMakeFiles/PhysicalRenderer.dir/main.cpp.o	f80ca0bca77f5289
+0	19	1653998566663129996	CMakeFiles/PhysicalRenderer.dir/src/spectrum/RGBSpectrum.cpp.o	83365128bf986e14
+0	15	1654157360937055781	build.ninja	465ab5f959811652
+0	872	1653998567516456634	CMakeFiles/PhysicalRenderer.dir/src/main.cpp.o	6b520982a7b0f941
+1132	1209	1653911532470495013	PhysicalRenderer	cb30d4c341a1814
+2	224	1654158408360183597	CMakeFiles/PhysicalRenderer.dir/src/material/Fresnel.cpp.o	f6c6482b0742b02c
+1	228	1654158408363516897	CMakeFiles/PhysicalRenderer.dir/src/spectrum/RGBSpectrum.cpp.o	d9d024c5db444d3e
+2	377	1654158408513515405	CMakeFiles/PhysicalRenderer.dir/src/material/DielectricFresnel.cpp.o	b380648536239c4b
+2	469	1654158408606847810	CMakeFiles/PhysicalRenderer.dir/src/material/ConductorFresnel.cpp.o	9c39b68277fe07e2
+1	1232	1654158409366840249	CMakeFiles/PhysicalRenderer.dir/src/main.cpp.o	75d3d0677a274c3c
+2	1235	1654158409370173549	CMakeFiles/PhysicalRenderer.dir/src/material/BxDF.cpp.o	baf68ab83cafcbeb
+2	1284	1654158409420173052	CMakeFiles/PhysicalRenderer.dir/src/material/SpecularReflection.cpp.o	d120b43438419960
+3	1316	1654158409453506053	CMakeFiles/PhysicalRenderer.dir/src/material/SpecularTransmission.cpp.o	b7bb6edc45000131
+3	1497	1654158409633504263	CMakeFiles/PhysicalRenderer.dir/src/material/FresnelSpecular.cpp.o	4b468d945e2e6bce
+1	1292	1654158470032903131	CMakeFiles/PhysicalRenderer.dir/src/material/LambertianReflection.cpp.o	3daff6d8ad83cd30
+1292	1416	1654158470156235236	PhysicalRenderer	32b215049f26f871
