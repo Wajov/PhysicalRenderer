@@ -13,7 +13,7 @@ RGBSpectrum LambertianReflection::f(const Eigen::Vector3f& wo, const Eigen::Vect
 RGBSpectrum LambertianReflection::sample(const Eigen::Vector3f& wo, Eigen::Vector3f& wi, const Eigen::Vector2f& u, float& pdf, BxDFType* type) {
     wi = cosineSampleHemisphere(u);
     if (wo.z() < 0.0f)
-        wi.z() *= -1.0f;
+        wi.z() = -wi.z();
     pdf = this->pdf(wo, wi);
     return INV_PI * R;
 }

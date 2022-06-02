@@ -46,10 +46,10 @@
   - [ ] TrowbridgeReitzDistribution
 - [X] BxDF
   - [X] SpecularReflection
-  - [ ] SpecularTransmission
-  - [ ] FresnelSpecular
-  - [ ] LambertianReflection
-  - [ ] LambertianTransmission
+  - [X] SpecularTransmission
+  - [X] FresnelSpecular
+  - [X] LambertianReflection
+  - [X] LambertianTransmission
   - [ ] OrenNayar
   - [ ] MicrofacetReflection
   - [ ] MicrofacetTransmission

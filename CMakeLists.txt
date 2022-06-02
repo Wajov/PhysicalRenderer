@@ -7,6 +7,7 @@ include_directories(src)
 set(HEADER
         src/MathHelper.h
         src/MaterialHelper.h
+        src/SampleHelper.h
         src/spectrum/Spectrum.h
         src/spectrum/RGBSpectrum.h
         src/material/BxDF.h
@@ -16,7 +17,8 @@ set(HEADER
         src/material/SpecularReflection.h
         src/material/SpecularTransmission.h
         src/material/FresnelSpecular.h
-        src/material/LambertianReflection.h src/SampleHelper.h)
+        src/material/LambertianReflection.h
+        src/material/LambertianTransmission.h)
 set(SOURCE
         src/main.cpp
         src/spectrum/RGBSpectrum.cpp
@@ -27,7 +29,8 @@ set(SOURCE
         src/material/SpecularReflection.cpp
         src/material/SpecularTransmission.cpp
         src/material/FresnelSpecular.cpp
-        src/material/LambertianReflection.cpp)
+        src/material/LambertianReflection.cpp
+        src/material/LambertianTransmission.cppdd)
 add_executable(PhysicalRenderer
         ${HEADER}
         ${SOURCE})
