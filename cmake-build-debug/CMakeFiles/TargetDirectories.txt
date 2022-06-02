@@ -1,3 +1,0 @@
-/home/wajov/Projects/PhysicalRenderer/cmake-build-debug/CMakeFiles/PhysicalRenderer.dir
-/home/wajov/Projects/PhysicalRenderer/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/wajov/Projects/PhysicalRenderer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
