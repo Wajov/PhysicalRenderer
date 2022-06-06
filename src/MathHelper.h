@@ -12,4 +12,12 @@ template <typename T> inline static T sqr(T x) {
     return x * x;
 }
 
+inline static float radian(float degree) {
+    return PI / 180.0f * degree;
+}
+
+inline static float degree(float radian) {
+    return 180.0f / PI * radian;
+}
+
 #endif

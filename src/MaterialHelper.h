@@ -36,6 +36,24 @@ inline static float tan2Theta(const Eigen::Vector3f& w) {
     return sin2Theta(w) / cos2Theta(w);
 }
 
+inline static float cosPhi(const Eigen::Vector3f& w) {
+    float sin = sinTheta(w);
+    return sin == 0.0f ? 1.0f : std::clamp(w.x() / sin, -1.0f, 1.0f);
+}
+
+inline static float cos2Phi(const Eigen::Vector3f& w) {
+    return sqr(cosPhi(w));
+}
+
+inline static float sinPhi(const Eigen::Vector3f& w) {
+    float sin = sinTheta(w);
+    return sin == 0.0f ? 0.0f : std::clamp(w.y() / sin, -1.0f, 1.0f);
+}
+
+inline static float sin2Phi(const Eigen::Vector3f& w) {
+    return sqr(sinPhi(w));
+}
+
 inline static bool sameHemisphere(const Eigen::Vector3f& wo, const Eigen::Vector3f& wi) {
     return wo.z() * wi.z() > 0.0f;
 }

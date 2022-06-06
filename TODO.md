@@ -41,7 +41,7 @@
   - [X] FresnelConductor
   - [X] FresnelDielectrics
   - [ ] FresnelNoOp
-- [ ] MicrofacetDistribution
+- [X] MicrofacetDistribution
   - [ ] BeckmannSpizzichinoDistribution
   - [ ] TrowbridgeReitzDistribution
 - [X] BxDF
@@ -50,7 +50,7 @@
   - [X] FresnelSpecular
   - [X] LambertianReflection
   - [X] LambertianTransmission
-  - [ ] OrenNayar
+  - [X] OrenNayar
   - [ ] MicrofacetReflection
   - [ ] MicrofacetTransmission
   - [ ] FresnelBlend

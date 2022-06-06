@@ -18,7 +18,12 @@ set(HEADER
         src/material/SpecularTransmission.h
         src/material/FresnelSpecular.h
         src/material/LambertianReflection.h
-        src/material/LambertianTransmission.h)
+        src/material/LambertianTransmission.h
+        src/material/OrenNayarReflection.h
+        src/material/MicrofacetDistribution.h
+        src/material/BeckmannSpizzichinoDistribution.h
+        src/material/TrowbridgeReitzDistribution.h
+        src/material/MicrofacetReflection.h)
 set(SOURCE
         src/main.cpp
         src/spectrum/RGBSpectrum.cpp
@@ -30,7 +35,12 @@ set(SOURCE
         src/material/SpecularTransmission.cpp
         src/material/FresnelSpecular.cpp
         src/material/LambertianReflection.cpp
-        src/material/LambertianTransmission.cppdd)
+        src/material/LambertianTransmission.cpp
+        src/material/OrenNayarReflection.cpp
+        src/material/MicrofacetDistribution.cpp
+        src/material/BeckmannSpizzichinoDistribution.cpp
+        src/material/TrowbridgeReitzDistribution.cpp
+        src/material/MicrofacetReflection.cpp)
 add_executable(PhysicalRenderer
         ${HEADER}
         ${SOURCE})
