@@ -1,9 +1,9 @@
 #include "SpecularReflection.h"
 
-SpecularReflection::SpecularReflection(const RGBSpectrum& reflectance, const Fresnel* fresnel) :
+SpecularReflection::SpecularReflection(const RGBSpectrum& reflectance, Fresnel* fresnel) :
         BxDF(BxDFType(BXDF_REFLECTION | BXDF_SPECULAR)),
         R(reflectance),
-        fresnel((Fresnel*)fresnel) {}
+        fresnel(fresnel) {}
 
 SpecularReflection::~SpecularReflection() {}
 

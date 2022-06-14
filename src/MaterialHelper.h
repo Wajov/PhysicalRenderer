@@ -62,6 +62,10 @@ inline static Eigen::Vector3f faceForward(const Eigen::Vector3f& n, const Eigen:
     return n.dot(v) > 0.0f ? n : -n;
 }
 
+inline static Eigen::Vector3f reflect(const Eigen::Vector3f& wo, const Eigen::Vector3f& n) {
+    return -wo + 2.0f * wo.dot(n) * n;
+}
+
 inline static bool refract(const Eigen::Vector3f& wi, const Eigen::Vector3f& n, float eta, Eigen::Vector3f& wt) {
     float cosThetaI = n.dot(wi);
     float sin2ThetaI = std::max(0.0f, 1.0f - sqr(cosThetaI));

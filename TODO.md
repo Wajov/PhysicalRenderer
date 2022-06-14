@@ -31,12 +31,12 @@
   - [ ] GlobalSampler
     - [ ] HaltonSampler
     - [ ] SobolSampler
-- [ ] Filter
-  - [ ] BoxFilter
-  - [ ] TriangleFilter
-  - [ ] GaussianFilter
-  - [ ] MitchellFilter
-  - [ ] LanczosSincFilter
+- [X] Filter
+  - [X] BoxFilter
+  - [X] TriangleFilter
+  - [X] GaussianFilter
+  - [X] MitchellFilter
+  - [X] LanczosSincFilter
 - [X] Fresnel
   - [X] FresnelConductor
   - [X] FresnelDielectrics
@@ -51,8 +51,8 @@
   - [X] LambertianReflection
   - [X] LambertianTransmission
   - [X] OrenNayar
-  - [ ] MicrofacetReflection
-  - [ ] MicrofacetTransmission
+  - [X] MicrofacetReflection
+  - [X] MicrofacetTransmission
   - [ ] FresnelBlend
   - [ ] FourierBSDF
 - [ ] Material

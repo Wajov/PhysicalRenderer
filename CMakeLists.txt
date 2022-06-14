@@ -8,8 +8,17 @@ set(HEADER
         src/MathHelper.h
         src/MaterialHelper.h
         src/SampleHelper.h
+        src/Bounds.h
+        src/Pixel.h
+        src/Film.h
         src/spectrum/Spectrum.h
         src/spectrum/RGBSpectrum.h
+        src/filter/Filter.h
+        src/filter/BoxFilter.h
+        src/filter/TriangleFilter.h
+        src/filter/GaussianFilter.h
+        src/filter/MitchellFilter.h
+        src/filter/SincFilter.h
         src/material/BxDF.h
         src/material/Fresnel.h
         src/material/DielectricFresnel.h
@@ -23,10 +32,19 @@ set(HEADER
         src/material/MicrofacetDistribution.h
         src/material/BeckmannSpizzichinoDistribution.h
         src/material/TrowbridgeReitzDistribution.h
-        src/material/MicrofacetReflection.h)
+        src/material/MicrofacetReflection.h
+        src/material/MicrofacetTransmission.h)
 set(SOURCE
         src/main.cpp
+        src/Pixel.cpp
+        src/Film.cpp
         src/spectrum/RGBSpectrum.cpp
+        src/filter/Filter.cpp
+        src/filter/BoxFilter.cpp
+        src/filter/TriangleFilter.cpp
+        src/filter/GaussianFilter.cpp
+        src/filter/MitchellFilter.cpp
+        src/filter/SincFilter.cpp
         src/material/BxDF.cpp
         src/material/Fresnel.cpp
         src/material/DielectricFresnel.cpp
@@ -40,7 +58,8 @@ set(SOURCE
         src/material/MicrofacetDistribution.cpp
         src/material/BeckmannSpizzichinoDistribution.cpp
         src/material/TrowbridgeReitzDistribution.cpp
-        src/material/MicrofacetReflection.cpp)
+        src/material/MicrofacetReflection.cpp
+        src/material/MicrofacetTransmission.cpp)
 add_executable(PhysicalRenderer
         ${HEADER}
         ${SOURCE})

@@ -14,7 +14,7 @@ private:
     Fresnel* fresnel;
 
 public:
-    SpecularReflection(const RGBSpectrum& reflectance, const Fresnel* fresnel);
+    SpecularReflection(const RGBSpectrum& reflectance, Fresnel* fresnel);
     ~SpecularReflection();
     RGBSpectrum f(const Eigen::Vector3f& wo, const Eigen::Vector3f& wi) const override;
     RGBSpectrum sample(const Eigen::Vector3f& wo, Eigen::Vector3f& wi, const Eigen::Vector2f& u, float& pdf, BxDFType* type) override;

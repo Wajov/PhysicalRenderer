@@ -1,20 +1,22 @@
-#ifndef MICROFACET_REFLECTION_H
-#define MICROFACET_REFLECTION_H
+#ifndef MICROFACET_TRANSMISSION_H
+#define MICROFACET_TRANSMISSION_H
 
 #include "BxDF.h"
-#include "Fresnel.h"
+#include "DielectricFresnel.h"
 #include "MicrofacetDistribution.h"
 #include "spectrum/RGBSpectrum.h"
 
-class MicrofacetReflection : public BxDF {
+class MicrofacetTransmission : public BxDF {
 private:
-    RGBSpectrum R;
+    RGBSpectrum T;
     MicrofacetDistribution* distribution;
-    Fresnel* fresnel;
+    float etaA, etaB;
+    DielectricFresnel* fresnel;
+    TransportMode mode;
 
 public:
-    MicrofacetReflection(const RGBSpectrum& R, MicrofacetDistribution* distribution, Fresnel* fresnel);
-    ~MicrofacetReflection();
+    MicrofacetTransmission(const RGBSpectrum& T, MicrofacetDistribution* distribution, float etaA, float etaB, TransportMode mode);
+    ~MicrofacetTransmission();
     RGBSpectrum f(const Eigen::Vector3f& wo, const Eigen::Vector3f& wi) const override;
     RGBSpectrum sample(const Eigen::Vector3f& wo, Eigen::Vector3f& wi, const Eigen::Vector2f& u, float& pdf, BxDFType* type) override;
     float pdf(const Eigen::Vector3f& wo, const Eigen::Vector3f& wi) const override;

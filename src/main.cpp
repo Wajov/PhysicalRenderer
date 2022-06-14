@@ -4,6 +4,6 @@
 
 int main() {
     Eigen::Vector2f v(1.0f, 1.0f);
-    std::cout << v.squaredNorm() << std::endl;
+    std::cout << v << std::endl;
     return 0;
 }
