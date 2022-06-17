@@ -8,6 +8,7 @@ public:
     RGBSpectrum(float v = 0.0f);
     RGBSpectrum(const Spectrum<3>& p);
     ~RGBSpectrum();
+    Spectrum<3> toXYZ() const;
 };
 
 #endif

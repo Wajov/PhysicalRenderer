@@ -60,6 +60,12 @@ public:
         return ans;
     }
 
+    Spectrum<n>& operator*=(float v) {
+        for (int i = 0; i < n; i++)
+            c[i] *= v;
+        return *this;
+    }
+
     Spectrum<n> operator*(const Spectrum<n>& s) const {
         Spectrum<n> ans;
         for (int i = 0; i < n; i++)
@@ -80,6 +86,12 @@ public:
         return ans;
     }
 
+    Spectrum<n>& operator/=(float v) {
+        for (int i = 0; i < n; i++)
+            c[i] /= v;
+        return *this;
+    }
+
     Spectrum<n> operator/(const Spectrum<n>& s) const {
         Spectrum<n> ans;
         for (int i = 0; i < n; i++)
@@ -91,6 +103,14 @@ public:
         for (int i = 0; i < n; i++)
             c[i] /= s.c[i];
         return *this;
+    }
+
+    float& operator[](int i) {
+        return c[i];
+    }
+
+    float operator[](int i) const {
+        return c[i];
     }
 
     friend inline Spectrum<n> sqrt(const Spectrum<n>& s) {

@@ -1,9 +1,12 @@
 #ifndef PIXEL_H
 #define PIXEL_H
 
+#include "spectrum/XYZSpectrum.h"
+
 class Pixel {
 public:
-    float filterWeightSum, xyz[3], splatXYZ[3];
+    float filterWeightSum;
+    XYZSpectrum spectrumSum;
     Pixel();
     ~Pixel();
 };

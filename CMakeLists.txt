@@ -6,13 +6,17 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(src)
 set(HEADER
         src/MathHelper.h
+        src/TransformHelper.h
         src/MaterialHelper.h
         src/SampleHelper.h
         src/Bounds.h
         src/Pixel.h
         src/Film.h
+        src/Transform.h
+        src/Scene.h
         src/spectrum/Spectrum.h
         src/spectrum/RGBSpectrum.h
+        src/spectrum/XYZSpectrum.h
         src/filter/Filter.h
         src/filter/BoxFilter.h
         src/filter/TriangleFilter.h
@@ -33,12 +37,22 @@ set(HEADER
         src/material/BeckmannSpizzichinoDistribution.h
         src/material/TrowbridgeReitzDistribution.h
         src/material/MicrofacetReflection.h
-        src/material/MicrofacetTransmission.h)
+        src/material/MicrofacetTransmission.h
+        src/medium/Medium.h
+        src/camera/CameraSample.h
+        src/camera/Camera.h
+        src/camera/ProjectiveCamera.h
+        src/camera/OrthographicCamera.h
+        src/integrator/Integrator.h
+        src/integrator/SamplerIntegrator.h)
 set(SOURCE
         src/main.cpp
         src/Pixel.cpp
         src/Film.cpp
+        src/Transform.cpp
+        src/Scene.cpp
         src/spectrum/RGBSpectrum.cpp
+        src/spectrum/XYZSpectrum.cpp
         src/filter/Filter.cpp
         src/filter/BoxFilter.cpp
         src/filter/TriangleFilter.cpp
@@ -59,7 +73,14 @@ set(SOURCE
         src/material/BeckmannSpizzichinoDistribution.cpp
         src/material/TrowbridgeReitzDistribution.cpp
         src/material/MicrofacetReflection.cpp
-        src/material/MicrofacetTransmission.cpp)
+        src/material/MicrofacetTransmission.cpp
+        src/medium/Medium.cpp
+        src/camera/CameraSample.cpp
+        src/camera/Camera.cpp
+        src/camera/ProjectiveCamera.cpp
+        src/camera/OrthographicCamera.cpp
+        src/integrator/Integrator.cpp
+        src/integrator/SamplerIntegrator.cpp)
 add_executable(PhysicalRenderer
         ${HEADER}
         ${SOURCE})
