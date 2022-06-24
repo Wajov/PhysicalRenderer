@@ -1,13 +1,14 @@
 #include "SamplerIntegrator.h"
 
 SamplerIntegrator::SamplerIntegrator(Camera* camera, Sampler* sampler, const Bounds2i& pixelBounds) :
+    Integrator(),
     camera(camera),
     sampler(sampler),
     pixelBounds(pixelBounds) {}
 
 SamplerIntegrator::~SamplerIntegrator() {}
 
-void SamplerIntegrator::render(const Scene& scene) {
+void SamplerIntegrator::render(const Scene* scene) {
     preprocess(scene);
 
     Bounds2i sampleBounds = film->getSampleBounds();

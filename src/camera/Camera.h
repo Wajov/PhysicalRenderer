@@ -16,7 +16,6 @@ protected:
 public:
     Camera(const Transform& cameraToWorld, float shutterOpen, float shutterClose, Film* film, Medium* medium);
     ~Camera();
-    virtual float generateRay(const CameraSample& sample, Ray& ray) const = 0;
     virtual float generateRayDifferential(const CameraSample& sample, RayDifferential& ray) const = 0;
 };
 

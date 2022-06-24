@@ -13,6 +13,7 @@ set(HEADER
         src/Pixel.h
         src/Film.h
         src/Transform.h
+        src/Ray.h
         src/Scene.h
         src/spectrum/Spectrum.h
         src/spectrum/RGBSpectrum.h
@@ -23,6 +24,7 @@ set(HEADER
         src/filter/GaussianFilter.h
         src/filter/MitchellFilter.h
         src/filter/SincFilter.h
+        src/shape/Shape.h
         src/material/BxDF.h
         src/material/Fresnel.h
         src/material/DielectricFresnel.h
@@ -43,13 +45,15 @@ set(HEADER
         src/camera/Camera.h
         src/camera/ProjectiveCamera.h
         src/camera/OrthographicCamera.h
+        src/camera/PerspectiveCamera.h
         src/integrator/Integrator.h
-        src/integrator/SamplerIntegrator.h)
+        src/integrator/SamplerIntegrator.h src/shape/Sphere.cpp src/shape/Sphere.h)
 set(SOURCE
         src/main.cpp
         src/Pixel.cpp
         src/Film.cpp
         src/Transform.cpp
+        src/Ray.cpp
         src/Scene.cpp
         src/spectrum/RGBSpectrum.cpp
         src/spectrum/XYZSpectrum.cpp
@@ -59,6 +63,7 @@ set(SOURCE
         src/filter/GaussianFilter.cpp
         src/filter/MitchellFilter.cpp
         src/filter/SincFilter.cpp
+        src/shape/Shape.cpp
         src/material/BxDF.cpp
         src/material/Fresnel.cpp
         src/material/DielectricFresnel.cpp
@@ -79,8 +84,9 @@ set(SOURCE
         src/camera/Camera.cpp
         src/camera/ProjectiveCamera.cpp
         src/camera/OrthographicCamera.cpp
+        src/camera/PerspectiveCamera.cpp
         src/integrator/Integrator.cpp
-        src/integrator/SamplerIntegrator.cpp)
+        src/integrator/SamplerIntegrator.cpp src/shape/Sphere.cpp src/shape/Sphere.h)
 add_executable(PhysicalRenderer
         ${HEADER}
         ${SOURCE})

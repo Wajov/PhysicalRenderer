@@ -16,10 +16,10 @@
   - [ ] CoefficientSpectrum
     - [ ] SampledSpectrum
     - [X] RGBSpectrum
-- [ ] Camera
-  - [ ] ProjectiveCamera
-    - [ ] OrthographicCamera
-    - [ ] PerspectiveCamera
+- [X] Camera
+  - [X] ProjectiveCamera
+    - [X] OrthographicCamera
+    - [X] PerspectiveCamera
   - [ ] EnvironmentCamera
   - [ ] RealisticCamera
 - [ ] Sampler
@@ -104,11 +104,12 @@
     - [ ] DiffuseAreaLight
   - [ ] InfiniteAreaLight
 - [ ] Integrator
-  - [ ] WhittedIntegrator
-  - [ ] DirectLightingIntegrator
-  - [ ] PathIntegrator
-  - [ ] VolPathIntegrator
+  - [ ] SamplerIntegrator
+    - [ ] AOIntegrator
+    - [ ] WhittedIntegrator
+    - [ ] DirectLightingIntegrator
+    - [ ] PathIntegrator
+    - [ ] VolPathIntegrator
   - [ ] BDPTIntegrator
-  - [ ] AOIntegrator
   - [ ] SPPMIntegrator
   - [ ] MLTIntegrator

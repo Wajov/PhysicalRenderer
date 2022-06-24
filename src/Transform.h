@@ -3,6 +3,9 @@
 
 #include <Eigen/Dense>
 
+#include "Bounds.h"
+#include "Ray.h"
+
 class Transform {
 private:
     Eigen::Matrix4f m, invM;
@@ -14,6 +17,11 @@ public:
     Transform(const Transform& transform);
     ~Transform();
     Transform operator*(const Transform& transform) const;
+    Eigen::Vector3f transformPoint(const Eigen::Vector3f& p) const;
+    Eigen::Vector3f transformVector(const Eigen::Vector3f& v) const;
+    Bounds3f transformBounds(const Bounds3f& b) const;
+    Ray transformRay(const Ray& r) const;
+    RayDifferential transformRayDifferential(const RayDifferential& r) const;
     Transform inverse() const;
 };
 

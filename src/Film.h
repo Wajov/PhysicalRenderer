@@ -22,7 +22,7 @@ private:
     std::string filename;
 
 public:
-    Film(const Eigen::Vector2i& resolution, const Bounds2f& cropWindow, Filter* filter, float diagonal, const std::string& filename, float scale, float maxSampleLuminance = std::numeric_limits<float>::infinity());
+    Film(const Eigen::Vector2i& resolution, const Bounds2f& cropWindow, Filter* filter, float diagonal, const std::string& filename, float scale, float maxSampleLuminance = INF);
     ~Film();
     Eigen::Vector2i getResolution() const;
     Bounds2i getSampleBounds() const;

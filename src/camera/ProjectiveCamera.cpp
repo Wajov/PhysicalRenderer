@@ -6,11 +6,9 @@ ProjectiveCamera::ProjectiveCamera(const Transform& cameraToWorld, const Transfo
     lensRadius(lensRadius),
     focalDistance(focalDistance) {
     Eigen::Vector2i resolution = film->getResolution();
-    screenToRaster = scale(Eigen::Vector3f((float)resolution.x(), (float)resolution.y(), 1.0f)) * scale(Eigen::Vector3f(1.0f / (screenWindow.pMax.x() - screenWindow.pMin.x()), 1.0f / (screenWindow.pMax.y() - screenWindow.pMin.y()), 1.0f)) * translate(Eigen::Vector3f(-screenWindow.pMin.x(), -screenWindow.pMin.y(), 1.0f));
+    screenToRaster = scale(Eigen::Vector3f((float)resolution.x(), (float)resolution.y(), 1.0f)) * scale(Eigen::Vector3f(1.0f / (screenWindow.pMax.x() - screenWindow.pMin.x()), 1.0f / (screenWindow.pMin.y() - screenWindow.pMax.y()), 1.0f)) * translate(Eigen::Vector3f(-screenWindow.pMin.x(), -screenWindow.pMax.y(), 1.0f));
     rasterToScreen = screenToRaster.inverse();
     rasterToCamera = cameraToScreen.inverse() * rasterToScreen;
 }
 
-ProjectiveCamera::~ProjectiveCamera() {
-
-}
+ProjectiveCamera::~ProjectiveCamera() {}

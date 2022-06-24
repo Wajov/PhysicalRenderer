@@ -11,6 +11,10 @@ public:
         pMin(Eigen::Vector<T, n>::Zero()),
         pMax(Eigen::Vector<T, n>::Zero()) {}
 
+    Bounds(const Eigen::Vector<T, n>& p) :
+        pMin(p),
+        pMax(p) {}
+
     Bounds(const Eigen::Vector<T, n>& pMin, const Eigen::Vector<T, n>& pMax) :
         pMin(pMin),
         pMax(pMax) {}
@@ -20,6 +24,13 @@ public:
         pMax(bounds.pMax) {}
 
     ~Bounds() {}
+
+    void add(const Eigen::Vector3f& p) {
+        for (int i = 0; i < n; i++) {
+            pMin(i) = std::min(pMin(i), p(i));
+            pMax(i) = std::max(pMax(i), p(i));
+        }
+    }
 
     Eigen::Vector<T, n> adjust(const Eigen::Vector<T, n>& v) {
         Eigen::Vector<T, n> ans = v;
@@ -35,6 +46,9 @@ template <typename T> class Bounds2 : public Bounds<T, 2> {
 public:
     Bounds2() :
         Bounds<T, 2>() {}
+
+    Bounds2(const Eigen::Vector<T, 2>& p) :
+        Bounds<T, 2>(p) {}
 
     Bounds2(const Eigen::Vector<T, 2>& pMin, const Eigen::Vector<T, 2>& pMax) :
         Bounds<T, 2>(pMin, pMax) {}
@@ -54,6 +68,9 @@ template <typename T> class Bounds3 : public Bounds<T, 3> {
 public:
     Bounds3() :
         Bounds<T, 3>() {}
+
+    Bounds3(const Eigen::Vector<T, 3>& p) :
+        Bounds<T, 3>(p) {}
 
     Bounds3(const Eigen::Vector<T, 3>& pMin, const Eigen::Vector<T, 3>& pMax) :
         Bounds<T, 3>(pMin, pMax) {}

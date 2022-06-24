@@ -2,7 +2,7 @@
 #define PROJECTIVE_CAMERA_H
 
 #include "TransformHelper.h"
-#include "Bounds.h"
+#include "SampleHelper.h"
 #include "Camera.h"
 
 class ProjectiveCamera : public Camera {
