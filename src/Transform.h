@@ -22,6 +22,9 @@ public:
     Bounds3f transformBounds(const Bounds3f& b) const;
     Ray transformRay(const Ray& r) const;
     RayDifferential transformRayDifferential(const RayDifferential& r) const;
+    Eigen::Vector3f transformPoint(const Eigen::Vector3f& p, Eigen::Vector3f& pError) const;
+    Eigen::Vector3f transformVector(const Eigen::Vector3f& v, Eigen::Vector3f& vError) const;
+    Ray transformRay(const Ray& r, Eigen::Vector3f& oError, Eigen::Vector3f& dError) const;
     Transform inverse() const;
 };
 
