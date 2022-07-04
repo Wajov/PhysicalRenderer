@@ -47,7 +47,7 @@ set(HEADER
         src/camera/OrthographicCamera.h
         src/camera/PerspectiveCamera.h
         src/integrator/Integrator.h
-        src/integrator/SamplerIntegrator.h src/shape/Sphere.cpp src/shape/Sphere.h)
+        src/integrator/SamplerIntegrator.h src/shape/Sphere.cpp src/shape/Sphere.h src/ErrorFloat.cpp src/ErrorFloat.h)
 set(SOURCE
         src/main.cpp
         src/Pixel.cpp
@@ -86,7 +86,7 @@ set(SOURCE
         src/camera/OrthographicCamera.cpp
         src/camera/PerspectiveCamera.cpp
         src/integrator/Integrator.cpp
-        src/integrator/SamplerIntegrator.cpp src/shape/Sphere.cpp src/shape/Sphere.h)
+        src/integrator/SamplerIntegrator.cpp src/shape/Sphere.cpp src/shape/Sphere.h src/ErrorFloat.cpp src/ErrorFloat.h)
 add_executable(PhysicalRenderer
         ${HEADER}
         ${SOURCE})

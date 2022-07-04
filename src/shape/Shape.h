@@ -14,7 +14,7 @@ public:
     ~Shape();
     virtual Bounds3f objectBounds() const = 0;
     virtual Bounds3f worldBounds() const;
-    virtual bool intersect(const Ray& ray, float& tHit, SurfaceInteraction& interaction, bool testAlphaTexture) const = 0;
+    virtual bool intersect(const Ray& r, float& tHit, SurfaceInteraction& interaction, bool testAlphaTexture) const = 0;
 };
 
 #endif

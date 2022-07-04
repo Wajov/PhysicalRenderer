@@ -3,6 +3,7 @@
 
 #include "MathHelper.h"
 #include "Shape.h"
+#include "ErrorFloat.h"
 
 class Sphere : public Shape {
 private:
@@ -12,7 +13,7 @@ public:
     Sphere(const Transform& objectToWorld, const Transform& worldToObject, bool reverseOrientation, float radius, float zMin, float zMax, float phiMax);
     ~Sphere();
     Bounds3f objectBounds() const override;
-    bool intersect(const Ray& ray, float& tHit, int& interaction, bool testAlphaTexture) const override;
+    bool intersect(const Ray& r, float& tHit, int& interaction, bool testAlphaTexture) const override;
 };
 
 
