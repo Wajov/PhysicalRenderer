@@ -46,5 +46,5 @@ bool Sphere::intersect(const Ray& r, float& tHit, int& interaction, bool testAlp
     if (phi < 0.0f)
         phi += 2 * PI;
 
-
+    // TODO
 }
